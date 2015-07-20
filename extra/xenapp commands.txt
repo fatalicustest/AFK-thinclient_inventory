@@ -1,0 +1,10 @@
+Requires PS for Xitrix XenApp
+
+Velg:
+Windows Powershell with Citrix XenApp 6.5 server SDK
+
+# Get username of everyone in a group:
+$users =(Get-ADGroupMember AD-Group | where {$_.objectclass -eq "user"} |get-aduser).samaccountname
+
+# Get all active sessions of users in the relevant group:
+Get-XASession -full | where {$users -contains $($_.accountname).substring($_.accountname.indexof("\")+1) }  
