@@ -8,3 +8,15 @@
     File Name     : main.ps1
     Author        : Rolf Røsand (rolf.rosand@akershus-fk.no)
 #>
+
+# Import XenApp modules to session
+
+Add-PSSnapIn Citrix.Common.Commands
+Add-PSSnapin Citrix.XenApp.Commands
+Add-PSSnapIn Citrix.Common.GroupPolicy
+
+# Import settings from settings.xml for later use if the file exists
+
+if (Test-Path .\settings.xml){
+[xml]$SettingsFile = Get-Content .\settings.xml
+}
