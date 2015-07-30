@@ -6,7 +6,6 @@
 	environment, and creates a list of clients, with citrix version and user connected.
 .NOTES
     File Name     : main.ps1
-    Author        : Rolf Røsand (rolf.rosand@akershus-fk.no)
 #>
 
 # Import XenApp modules to session
