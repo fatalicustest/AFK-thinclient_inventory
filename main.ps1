@@ -19,3 +19,5 @@ Add-PSSnapIn Citrix.Common.GroupPolicy
 if (Test-Path .\settings.xml){
 [xml]$SettingsFile = Get-Content .\settings.xml
 }
+
+# I'm going to add some more exciting things under here, but for now this is just a test.
